@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of Making GET Request using Ajax in jQuery</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("ajax.txt", function(data){
+            // Display the returned data in browser
+            $("#result").html(data);
+        });/*from   ww w . j a v a  2  s  .  c  o m*/
+    });
+});
+</script>
+</head>
+<body>
+    <div id="result">
+        <h2>Content of the result DIV box will be replaced by the server data</h2>
+    </div>
+    <button type="button">Load</button>
+</body>
+</html>
